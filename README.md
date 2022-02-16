@@ -365,3 +365,12 @@ gost -L=:8080 -F="http2://server_domain_name:443?secure=true"
 gost -L=:8080 -F="http2://:443?ca=ca.pem"
 ```
 证书锁定功能由[@sheerun](https://github.com/sheerun)贡献
+
+
+服务端：
+gost -L=mtls://:port
+
+客户端：
+gost -L=:port -F=mtls://ip:port
+
+
